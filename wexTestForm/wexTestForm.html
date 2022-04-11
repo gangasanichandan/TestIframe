@@ -1,0 +1,31 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <div class="modal-styling">
+        
+            <lightning-quick-action-panel title="Create Application" header="Create Application">
+                <div class="slds-grid slds-grid_align-center">
+                    <div class="slds-col slds-size_1-of-1">
+                        <article class="slds-card">
+                            <div class="slds-card__header">
+                                <span class="slds-text-heading--small">Account</span>
+                            </div>
+                            <div class="slds-card__body">
+                                <div class="slds-card__body--inner slds-grid slds-wrap slds-p-around_medium">
+                                    <div class="slds-size--1-of-1 slds-medium-size--1-of-1">
+                                        <lightning-input class="slds-p-around_x-small" type="text" label="Account Name" value={accountName} onblur={handleNameChange}></lightning-input>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="wexFormContainer" lwc:dom="manual"> </div>
+                <form action="fullUrl" method="POST" name="wexForm" autocomplete="off"></form>
+                <div slot="footer">
+                    <lightning-button variant="neutral" label="Cancel" onclick={cancel} class="slds-float_left"></lightning-button>
+                    <lightning-button variant="brand" label="Submit" onclick={submit} class="slds-float_right"></lightning-button>
+                </div>
+            </lightning-quick-action-panel>
+
+    </div>
+</template>
